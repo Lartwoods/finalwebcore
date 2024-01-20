@@ -1,0 +1,515 @@
+// @font-face {
+//   font-family: 'TT Lakes';
+//   src: url('assets/fonts/medium/TTLakes-Medium.woff2') format('woff2'),
+//     url('assets/fonts/medium/TTLakes-Medium.woff') format('woff');
+// }
+
+// @font-face {
+//   font-family: 'TT Lakes Bold';
+//   src: url('assets/fonts/bold/TTLakes-ExtraBold.woff2') format('woff2'),
+//     url('assets/fonts/bold/TTLakes-ExtraBold.woff') format('woff');
+// }
+
+// *,
+// *::before,
+// *::after {
+//   padding: 0;
+//   margin: 0;
+//   border: 0;
+//   box-sizing: border-box;
+//   font-family: 'TT Lakes';
+//   font-size: 16px;
+// }
+// html,
+// body {
+//   position: relative;
+//   height: 100%;
+// }
+// a {
+//   text-decoration: none;
+//   color: #1b1c21;
+// }
+
+// ul,
+// ol,
+// li {
+//   list-style: none;
+// }
+
+// html,
+// body {
+//   min-width: 320px;
+//   height: fit-content;
+//   color: #1b1c21;
+//   font-family: 'TT Lakes', sans-serif;
+//   font-size: 14px;
+//   line-height: 20px;
+//   letter-spacing: 0.2px;
+//   text-align: left;
+//   overflow-x: hidden;
+// }
+
+// .brand-wrapper {
+//   min-width: 320px;
+//   margin: auto;
+//   background-color: #f8f8f8;
+// }
+// button {
+//   background: none;
+//   border: none;
+//   padding: 0;
+//   cursor: pointer;
+// }
+
+// .brand-wrapper__text {
+//   width: 350px;
+//   height: 48px;
+//   padding: 2rem 0 2rem 2rem;
+//   color: #7e7e82;
+
+//   font-family: 'TT Lakes';
+//   font-size: 16px;
+//   font-weight: 10;
+//   line-height: 24px;
+//   text-transform: uppercase;
+// }
+// .brand-container {
+//   height: fit-content;
+//   margin: 0;
+//   padding: 20px;
+//   background-color: #f9f9f9;
+// }
+
+// .card img,
+// .brand-card img {
+//   height: 34px;
+//   width: auto;
+// }
+// .brand-card .round,
+// .card .round {
+//   height: 50px;
+// }
+// .card-button {
+//   position: relative;
+//   width: 40px;
+//   height: 40px;
+//   border: 2px solid #ff3e79;
+//   border-radius: 50%;
+//   border-radius: 50%;
+//   transition: transform 0.5s;
+// }
+// .card-button::before {
+//   content: '';
+//   position: absolute;
+//   top: 39%;
+//   left: 35%;
+//   width: 9px;
+//   height: 9px;
+//   border-top: 2.9px solid #ff3e79;
+//   border-right: 2.9px solid #ff3e79;
+//   border-radius: 2px 2px 2px 2px;
+//   transform: rotate(45deg);
+// }
+// .card-button:hover {
+//   transform: scale(1.09);
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+//   transition: box-shadow 0.5s transform 0.5s;
+// }
+
+// .card-button:active {
+//   transform: scale(0.95);
+//   filter: brightness(90%);
+// }
+
+// .button-show {
+//   display: none;
+// }
+// @media (min-width: 768px) {
+//   .brand-wrapper__text {
+//     width: 96%;
+//     height: fit-content;
+//     margin-left: 4%;
+//   }
+
+//   .card,
+//   .brand-card {
+//     width: 31% !important;
+//     border: 1px solid #eaeaea;
+//     border-radius: 6px;
+//   }
+
+//   .brand-list {
+//     display: flex;
+//     justify-content: start;
+
+//     flex-wrap: wrap;
+//   }
+//   .button-show,
+//   .button-hide {
+//     position: relative;
+//     display: block;
+//     width: auto;
+//     margin: 5% 0 2% 10%;
+//     transition: color 0.3s;
+//   }
+//   .button-show:before,
+//   .button-hide:before {
+//     position: absolute;
+//     content: '';
+//     background: url(../img/logo/expand.svg) no-repeat center center;
+//     background-size: contain;
+//     width: 15px;
+//     height: 15px;
+//     top: 10%;
+//     left: -35%;
+//     transition: transform 0.3s, opacity 0.3s;
+//   }
+
+//   .button-show:hover,
+//   .button-hide:hover {
+//     color: #b5b6bc;
+//     transition: color 0.3s opacity 0.3s;
+//   }
+
+//   .button-hide:before {
+//     transform: rotate(180deg);
+//     left: -65%;
+//     opacity: 1;
+//   }
+//   .button-hide:hover:before,
+//   .button-show:hover:before {
+//     opacity: 50%;
+//   }
+// }
+// @media (min-width: 1120px) {
+//   .brand-card {
+//     width: 23% !important;
+//   }
+// }
+$color-btn: #ff3e79;
+$color-gray-text: #7e7e82;
+$color-text: #1b1c21;
+$color-accent: #41f6d7;
+$color-border: #d9fff5;
+$color-background: #f8f8f8;
+$color-white: #ffffff;
+$color-black: #1b1c21;
+$color-gray: #7e7e82;
+
+// .brand-wrapper {
+//   min-width: 320px;
+//   margin: auto;
+//   background-color: $color-background;
+// }
+
+// button {
+//   background: none;
+//   border: none;
+//   padding: 0;
+//   cursor: pointer;
+// }
+
+// .brand-wrapper__text {
+//   width: 350px;
+//   height: 48px;
+//   padding: 2rem 0 2rem 2rem;
+//   color: $color-gray-text;
+//   font-family: 'TT Lakes';
+//   font-size: 16px;
+//   font-weight: 10;
+//   line-height: 24px;
+//   text-transform: uppercase;
+// }
+
+// .brand-container {
+//   height: fit-content;
+//   margin: 0;
+//   padding: 20px;
+//   background-color: #f9f9f9;
+// }
+
+// .card img,
+// .brand-card img {
+//   height: 34px;
+//   width: auto;
+// }
+
+// .brand-card .round,
+// .card .round {
+//   height: 50px;
+// }
+
+// .card-button {
+//   position: relative;
+//   width: 40px;
+//   height: 40px;
+//   border: 2px solid $color-btn;
+//   border-radius: 50%;
+//   transition: transform 0.5s;
+// }
+
+// .card-button::before {
+//   content: '';
+//   position: absolute;
+//   top: 39%;
+//   left: 35%;
+//   width: 9px;
+//   height: 9px;
+//   border-top: 2.9px solid $color-btn;
+//   border-right: 2.9px solid $color-btn;
+//   border-radius: 2px 2px 2px 2px;
+//   transform: rotate(45deg);
+// }
+
+// .card-button:hover {
+//   transform: scale(1.09);
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+//   transition: box-shadow 0.5s transform 0.5s;
+// }
+
+// .card-button:active {
+//   transform: scale(0.95);
+//   filter: brightness(90%);
+// }
+
+// .button-show {
+//   display: none;
+// }
+
+// @media (min-width: 768px) {
+//   .brand-wrapper__text {
+//     width: 96%;
+//     height: fit-content;
+//     margin-left: 4%;
+//   }
+
+//   .card,
+//   .brand-card {
+//     width: 31% !important;
+//     border: 1px solid #eaeaea;
+//     border-radius: 6px;
+//   }
+
+//   .brand-list {
+//     display: flex;
+//     justify-content: start;
+//     flex-wrap: wrap;
+//   }
+
+//   .button-show,
+//   .button-hide {
+//     position: relative;
+//     display: block;
+//     width: auto;
+//     margin: 5% 0 2% 10%;
+//     transition: color 0.3s;
+//   }
+
+//   .button-show:before,
+//   .button-hide:before {
+//     position: absolute;
+//     content: '';
+//     background: url(../img/logo/expand.svg) no-repeat center center;
+//     background-size: contain;
+//     width: 15px;
+//     height: 15px;
+//     top: 10%;
+//     left: -35%;
+//     transition: transform 0.3s, opacity 0.3s;
+//   }
+
+//   .button-show:hover,
+//   .button-hide:hover {
+//     color: #b5b6bc;
+//     transition: color 0.3s opacity 0.3s;
+//   }
+
+//   .button-hide:before {
+//     transform: rotate(180deg);
+//     left: -65%;
+//     opacity: 1;
+//   }
+
+//   .button-hide:hover:before,
+//   .button-show:hover:before {
+//     opacity: 50%;
+//   }
+// }
+
+// @media (min-width: 1120px) {
+//   .brand-card {
+//     width: 23% !important;
+//   }
+// }
+$color-btn: #ff3e79;
+$color-gray-text: #7e7e82;
+$color-text: #1b1c21;
+$color-accent: #41f6d7;
+$color-border: #d9fff5;
+$color-background: #f8f8f8;
+$color-white: #ffffff;
+$color-black: #1b1c21;
+$color-gray: #7e7e82;
+
+// @font-face {
+//   font-family: 'TT Lakes';
+//   src: url('assets/fonts/medium/TTLakes-Medium.woff2') format('woff2'),
+//     url('assets/fonts/medium/TTLakes-Medium.woff') format('woff');
+// }
+
+// @font-face {
+//   font-family: 'TT Lakes Bold';
+//   src: url('assets/fonts/bold/TTLakes-ExtraBold.woff2') format('woff2'),
+//     url('assets/fonts/bold/TTLakes-ExtraBold.woff') format('woff');
+// }
+
+// *,
+// *::before,
+// *::after {
+//   padding: 0;
+//   margin: 0;
+//   border: 0;
+//   box-sizing: border-box;
+// }
+
+.brand-wrapper {
+  min-width: 320px;
+  margin: auto;
+  background-color: $color-background;
+
+  &__text {
+    width: 350px;
+    height: 48px;
+    padding: 2rem 0 2rem 2rem;
+    color: $color-gray-text;
+    font-family: "TT Lakes";
+    font-size: 16px;
+    font-weight: 10;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &-container {
+    height: fit-content;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.card img,
+.brand-card img {
+  height: 34px;
+  width: auto;
+}
+
+.card .round,
+.brand-card .round {
+  height: 50px;
+}
+
+.card-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 2px solid $color-btn;
+  border-radius: 50%;
+  transition: transform 0.5s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 39%;
+    left: 35%;
+    width: 9px;
+    height: 9px;
+    border-top: 2.9px solid $color-btn;
+    border-right: 2.9px solid $color-btn;
+    border-radius: 2px 2px 2px 2px;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    transform: scale(1.09);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s transform 0.5s;
+  }
+
+  &:active {
+    transform: scale(0.95);
+    filter: brightness(90%);
+  }
+}
+
+.button-show {
+  display: none;
+
+  @media (min-width: 768px) {
+    position: relative;
+    display: block;
+    width: auto;
+    margin: 5% 0 2% 10%;
+    transition: color 0.3s;
+
+    &:before {
+      position: absolute;
+      content: "";
+      background: url(../img/ico/expand.svg) no-repeat center center;
+      background-size: contain;
+      width: 15px;
+      height: 15px;
+      top: 10%;
+      left: -35%;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    &:hover {
+      color: #b5b6bc;
+      transition: color 0.3s opacity 0.3s;
+    }
+
+    &:before {
+      transform: rotate(180deg);
+      left: -65%;
+      opacity: 1;
+    }
+
+    &:hover:before {
+      opacity: 50%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .brand-wrapper__text {
+    width: 96%;
+    height: fit-content;
+    margin-left: 4%;
+  }
+
+  .card,
+  .brand-card {
+    width: 31% !important;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+  }
+
+  .brand-list {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1120px) {
+  .brand-card {
+    width: 23% !important;
+  }
+}

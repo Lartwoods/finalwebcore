@@ -1,0 +1,292 @@
+// .feedback,
+// .modal-call {
+//   position: fixed;
+//   right: 0;
+//   top: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   z-index: 999;
+//   background-color: rgba(255, 255, 255, 0.8);
+//   backdrop-filter: blur(10px);
+//   visibility: hidden;
+//   opacity: 0;
+//   transition: all 0.4s;
+// }
+// .feedback.open,
+// .modal-call.open {
+//   visibility: visible;
+//   opacity: 1;
+// }
+// .open {
+//   visibility: visible;
+//   opacity: 1;
+// }
+// .feedback__wrapper,
+// .modal-call__wrapper {
+//   position: fixed;
+//   width: 320px;
+//   max-width: 400px;
+//   right: 0;
+//   top: 0;
+//   height: fit-content;
+//   margin: 0;
+//   padding: 20px;
+//   background-color: #fff;
+//   border-radius: 10px;
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+//   & > h2 {
+//     padding: 30px 0;
+//     font-size: 24px;
+//     position: relative;
+//   }
+//   & > h2::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: -20px;
+//     width: 4px;
+//     height: 100%;
+//     background: url('../img/logo/highlight.svg') no-repeat center;
+//     background-size: contain;
+//   }
+// }
+// .feedback__form,
+// .modal-call__form {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .feedback__label,
+// .modal-call__label {
+//   margin-bottom: 5px;
+//   color: #333;
+// }
+
+// .feedback__input,
+// .feedback__textarea,
+// .modal-call__input {
+//   padding: 10px;
+//   margin-bottom: 15px;
+//   border: 1px solid #ccc;
+//   border-radius: 5px;
+//   transition: border-color 0.3s;
+// }
+// .feedback__input::placeholder,
+// .feedback__textarea::placeholder,
+// .modal-call__input::placeholder {
+//   color: #b5b6bc;
+// }
+
+// .feedback__input:focus,
+// .feedback__textarea:focus,
+// .modal-call__input:focus {
+//   border-color: #007bff;
+//   outline: none;
+// }
+
+// .feedback__submit-button,
+// .modal-call__submit-button {
+//   transition: filter 0.3s, transform 0.3s;
+
+//   &:hover {
+//     transform: scale(1.04);
+//     -webkit-filter: drop-shadow(3px 3px 2px #e8e8e8);
+//     filter: drop-shadow(3px 3px 2px #e0e0e0);
+//   }
+// }
+// .feedback__consent,
+// .modal-call__consent {
+//   font-size: 12px;
+//   color: #7e7e82;
+//   margin-bottom: 15px;
+//   & > a {
+//     font-size: 12px;
+//     color: #ff3e79;
+//     &:hover {
+//       opacity: 0.5;
+//     }
+//   }
+// }
+
+// .feedback,
+// .modal-call {
+//   &__close-button {
+//     width: 40px;
+//     height: 40px;
+//     max-width: 100%;
+//     background-size: contain;
+//     background-image: url(../img/logo/burgerclose.svg);
+
+//     background-color: #ffffff;
+//     border-radius: 50%;
+//     cursor: pointer;
+//   }
+// }
+// .feedback__submit-button,
+// .modal-call__submit-button,
+// .swiper_prices .order-button {
+//   position: relative;
+//   width: 136px;
+//   height: 32px;
+//   padding-right: 10px;
+//   background-color: #ff3e79;
+//   color: #ffffff;
+//   border-radius: 20px;
+//   text-transform: uppercase;
+//   font-size: 0.9rem;
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: 37%;
+//     left: 83%;
+//     width: 8px;
+//     height: 8px;
+//     border-top: 2.9px solid #ffffff;
+//     border-right: 2.9px solid #ffffff;
+//     border-radius: 2px 2px 2px 2px;
+//     transform: rotate(45deg);
+//   }
+// }
+
+
+.feedback,
+.modal-call {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba($color-white, 0.8);
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__wrapper {
+    position: fixed;
+    width: 320px;
+    max-width: 400px;
+    right: 0;
+    top: 0;
+    height: fit-content;
+    margin: 0;
+    padding: 20px;
+    background-color: $color-white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    > h2 {
+      padding: 30px 0;
+      font-size: 24px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -20px;
+        width: 4px;
+        height: 100%;
+        background: url('../img/logo/highlight.svg') no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-bottom: 5px;
+    color: $color-text;
+  }
+
+  &__input,
+  &__textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+
+    &::placeholder {
+      color: #b5b6bc;
+    }
+
+    &:focus {
+      border-color: $color-accent;
+      outline: none;
+    }
+  }
+
+  &__submit-button {
+    transition: filter 0.3s, transform 0.3s;
+
+    &:hover {
+      transform: scale(1.04);
+      -webkit-filter: drop-shadow(3px 3px 2px #e8e8e8);
+      filter: drop-shadow(3px 3px 2px #e0e0e0);
+    }
+  }
+
+  &__consent {
+    font-size: 12px;
+    color: $color-gray-text;
+    margin-bottom: 15px;
+
+    & > a {
+      font-size: 12px;
+      color: $color-btn;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__close-button {
+    width: 40px;
+    height: 40px;
+    max-width: 100%;
+    background-size: contain;
+    background-image: url(../img/logo/burgerclose.svg);
+
+    background-color: $color-white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__submit-button,
+  .swiper_prices .order-button {
+    position: relative;
+    width: 136px;
+    height: 32px;
+    padding-right: 10px;
+    background-color: $color-btn;
+    color: $color-white;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 37%;
+      left: 83%;
+      width: 8px;
+      height: 8px;
+      border-top: 2.9px solid $color-white;
+      border-right: 2.9px solid $color-white;
+      border-radius: 2px 2px 2px 2px;
+      transform: rotate(45deg);
+    }
+  }
+}

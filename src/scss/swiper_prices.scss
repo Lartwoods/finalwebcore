@@ -1,0 +1,176 @@
+// .prices-list {
+//   display: none;
+
+//   @media (min-width: 768px) {
+//     display: block !important;
+//   }
+//   .prices-list__wrapper {
+//     margin: 0 auto;
+//   }
+// }
+
+// .brand-wrapper_prices {
+//   .duration {
+//     .order-button {
+//       width: 100px;
+//       font-size: 0.9rem;
+//     }
+//     .duration-time {
+//       padding: 0 30px 0 20px;
+//     }
+//   }
+//   .swiper-slide_prices {
+//     width: 300px;
+//   }
+//   @media (min-width: 768px) {
+//     display: none;
+//   }
+// }
+// .swiper.swiper_prices {
+//   height: 300px;
+//   .swiper-wrapper {
+//     margin-left: 5%;
+//   }
+
+//   .swiper-slide {
+//     border: none;
+//     background-color: #f8f8f8;
+//   }
+//   .card {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: start;
+//     width: 300px;
+//     font-size: 0.8rem;
+//     &_prices p:nth-child(odd) {
+//       color: #7e7e82;
+//     }
+//   }
+//   .duration {
+//     display: flex;
+//     justify-content: start;
+//     .duration-text {
+//       color: #7e7e82;
+//     }
+//     .duration-time {
+//       padding: 0 50px 0 20px;
+//     }
+//   }
+//   .card,
+//   .swiper-slide {
+//     display: flex;
+//     flex-direction: column;
+//     height: 250px;
+//   }
+//   .swiper-slide_prices {
+//     span {
+//       color: #7e7e82;
+//     }
+//   }
+// }
+// .swiper-slide_prices {
+//   p {
+//     font-size: 0.9rem;
+//   }
+//   .order-button {
+//     width: 96px;
+//     margin-right: -35%;
+//   }
+// }
+
+.prices-list {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block !important;
+
+    .prices-list__wrapper {
+      margin: 0 auto;
+    }
+  }
+}
+
+.brand-wrapper_prices {
+  .duration {
+    .order-button {
+      width: 100px;
+      font-size: 0.9rem;
+    }
+
+    .duration-time {
+      padding: 0 30px 0 20px;
+    }
+  }
+
+  .swiper-slide_prices {
+    width: 350px;
+  }
+}
+@media (min-width: 768px) {
+  .brand-wrapper_prices {
+    display: none;
+  }
+}
+.swiper.swiper_prices {
+  height: 300px;
+
+  .swiper-wrapper {
+    margin-left: 5%;
+  }
+
+  .swiper-slide {
+    border: none;
+    background-color: $color-background;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 300px;
+
+      font-size: 0.8rem;
+
+      &_prices p:nth-child(odd) {
+        color: $color-gray-text;
+      }
+    }
+
+    .duration {
+      display: flex;
+      justify-content: start;
+
+      .duration-text {
+        color: $color-gray-text;
+      }
+
+      .duration-time {
+        padding: 0 50px 0 20px;
+      }
+    }
+
+    .card,
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      height: 250px;
+      margin-top: 50%;
+    }
+
+    .swiper-slide_prices {
+      span {
+        color: $color-gray-text;
+      }
+    }
+  }
+}
+
+.swiper-slide_prices {
+  p {
+    font-size: 0.9rem;
+  }
+
+  .order-button {
+    // width: 96px;
+    // margin-right: -25%;
+  }
+}

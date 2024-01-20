@@ -1,0 +1,125 @@
+.header__container {
+  max-width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #d9fff5;
+  background-color: #ffffff;
+}
+
+.button,
+.services__reviews-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header__list,
+.header__left,
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__list {
+  padding: 0 20px;
+}
+
+.header__left,
+.header__right {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header {
+    display: block;
+  }
+  .header__left {
+    justify-content: start;
+  }
+  .header__left li {
+    margin: 20px;
+  }
+  .header__item-repair,
+  .header__item-checkstatus,
+  .header__item.tablet__logo,
+  .tablet__logo-call,
+  .tablet__logo-chat,
+  .tablet__logo-profile {
+    display: inline-block !important;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+  }
+  .tablet__logo-call {
+    background-image: url(../img/logo/call.svg);
+  }
+  .tablet__logo-chat {
+    background-image: url(../img/logo/chat.svg);
+  }
+  .tablet__logo-profile {
+    background-image: url(../img/logo/profile.svg);
+  }
+}
+.header__item.tablet__logo {
+  display: none;
+}
+
+.header__item.burger-menu,
+.header__item.tablet__logo,
+.header__item-repair,
+.header__item-checkstatus {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.burger-menu__showbtn .button {
+  margin-right: 40%;
+  background-repeat: no-repeat;
+}
+
+.header__item.burger-menu {
+  background-image: url(../img/logo/burger.svg);
+}
+
+.header__item.tablet__logo {
+  display: none;
+}
+
+.header__item-repair {
+  background-image: url(../img/logo/repair.svg);
+}
+
+.header__item-checkstatus {
+  background-image: url(../img/logo/checkstatus.svg);
+}
+
+.header__item--logo {
+  width: 96px;
+  height: auto;
+  max-width: 160px;
+}
+
+.header__list {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.header__item_border {
+  width: 2px;
+  height: 32px;
+  margin: 0 10px;
+  background-color: #d9fff5;
+}
+
+@media (min-width: 1440px) {
+  .header__list {
+    display: none;
+  }
+}/*# sourceMappingURL=header.css.map */
