@@ -421,6 +421,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+
   .services__info {
     flex: 1;
   }
@@ -503,7 +504,7 @@
     &--list {
       width: auto;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
       padding-left: 20px;
       overflow-x: auto;
@@ -829,4 +830,13 @@
 }
 #moretext {
   display: none;
+}
+@media (max-width: 768px) {
+  .services__about {
+    flex-direction: column;
+    .services__info,
+    .services__img {
+      width: 100%;
+    }
+  }
 }

@@ -144,42 +144,45 @@
 
 //     flex-wrap: wrap;
 //   }
-//   .button-show,
-//   .button-hide {
-//     position: relative;
-//     display: block;
-//     width: auto;
-//     margin: 5% 0 2% 10%;
-//     transition: color 0.3s;
-//   }
-//   .button-show:before,
-//   .button-hide:before {
-//     position: absolute;
-//     content: '';
-//     background: url(../img/logo/expand.svg) no-repeat center center;
-//     background-size: contain;
-//     width: 15px;
-//     height: 15px;
-//     top: 10%;
-//     left: -35%;
-//     transition: transform 0.3s, opacity 0.3s;
-//   }
+.button-show,
+.button-hide {
+  position: relative;
+  display: block;
+  width: auto;
+  margin: 5% 0 2% 10%;
+  transition: color 0.3s;
+}
+.button-show:before,
+.button-hide:before {
+  position: absolute;
+  content: "";
+  background: url(../img/logo/expand.svg) no-repeat center center;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  top: 10%;
+  left: -35%;
+  transition: transform 0.3s, opacity 0.3s;
+}
 
-//   .button-show:hover,
-//   .button-hide:hover {
-//     color: #b5b6bc;
-//     transition: color 0.3s opacity 0.3s;
-//   }
+.button-show:hover,
+.button-hide:hover {
+  color: #b5b6bc;
+  transition: color 0.3s opacity 0.3s;
+}
 
-//   .button-hide:before {
-//     transform: rotate(180deg);
-//     left: -65%;
-//     opacity: 1;
-//   }
-//   .button-hide:hover:before,
-//   .button-show:hover:before {
-//     opacity: 50%;
-//   }
+.button-hide:before {
+  transform: rotate(180deg);
+  left: -65%;
+  opacity: 1;
+}
+.button-hide {
+}
+.button-hide:hover:before,
+.button-show:hover:before {
+  opacity: 50%;
+}
+
 // }
 // @media (min-width: 1120px) {
 //   .brand-card {
@@ -379,7 +382,7 @@ $color-gray: #7e7e82;
 
   &__text {
     width: 350px;
-    height: 48px;
+    height: fit-content;
     padding: 2rem 0 2rem 2rem;
     color: $color-gray-text;
     font-family: "TT Lakes";
@@ -475,12 +478,6 @@ button {
       transition: color 0.3s opacity 0.3s;
     }
 
-    &:before {
-      transform: rotate(180deg);
-      left: -65%;
-      opacity: 1;
-    }
-
     &:hover:before {
       opacity: 50%;
     }
@@ -490,7 +487,7 @@ button {
 @media (min-width: 768px) {
   .brand-wrapper__text {
     width: 96%;
-    height: fit-content;
+    height: 60px;
     margin-left: 4%;
   }
 
@@ -512,4 +509,32 @@ button {
   .brand-card {
     width: 23% !important;
   }
+}
+
+.brand-picture {
+  width: 50%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-position: left;
+}
+.acer {
+  background-image: url("../img/5.svg");
+}
+.sony {
+  background-image: url("../img/6.svg");
+}
+.bosch {
+  background-image: url("../img/3.svg");
+}
+.samsung {
+  background-image: url("../img/7.svg");
+}
+.apple {
+  height: 70%;
+  background-image: url("../img/1.svg");
+}
+.lenovo {
+  background-image: url("../img/8.svg");
 }

@@ -7,6 +7,8 @@ import modal from "./modal-call.js";
 import readmore from "./services.js";
 import swiper from "./swiper.js";
 import mainPicture from "../img/Picture_copy.jpg";
+
+
 const mainPhoto = document.getElementById("mainPicture");
 mainPhoto.src = mainPicture;
 

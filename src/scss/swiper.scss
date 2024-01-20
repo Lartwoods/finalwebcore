@@ -22,7 +22,7 @@
   }
 }
 .card-button {
-  margin-left: 20%;
+  margin-left: 15%;
 }
 // .swiper-prices .order-button{
 //     стили кнопки в feedback.scss
@@ -54,31 +54,6 @@
 .swiper-slide {
   border: 1px solid #eaeaea;
   border-radius: 6px;
-}
-.brand-picture {
-  width: 94px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-.acer {
-  background-image: url("../img/5.svg");
-}
-.sony {
-  background-image: url("../img/6.svg");
-}
-.bosch {
-  background-image: url("../img/3.svg");
-}
-.samsung {
-  background-image: url("../img/7.svg");
-}
-.apple {
-  background-image: url("../img/1.svg");
-}
-.lenovo {
-  background-image: url("../img/8.svg");
 }
 .swiper-pagination-bullet {
   width: 22px;
