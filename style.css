@@ -820,11 +820,9 @@ button.swiper-pagination-bullet {
   display: block;
   width: 96px;
   height: 50px;
-  /* Set the desired height */
   max-width: 160px;
   background-image: url(img/CPS_logo.svg);
   background-size: contain;
-  /* Adjust as needed */
   background-repeat: no-repeat;
   background-position: center center; }
 
@@ -842,6 +840,12 @@ button.swiper-pagination-bullet {
 @media (min-width: 1440px) {
   .header__list {
     display: none; } }
+
+@media (max-width: 767px) {
+  .header__container {
+    height: 100px; }
+    .header__container .header__list {
+      padding-top: 5%; } }
 
 .prices-list {
   display: none !important; }
@@ -1072,14 +1076,14 @@ button:active {
 .services__about {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%; }
   .services__about .services__info {
     flex: 1; }
   .services__about .services__text {
     width: 100%; }
   .services__about .services__img {
-    flex: 1; }
+    flex: 1.2; }
   .services__about .services__img_file {
     width: 96%;
     padding: 2%; }
@@ -1173,6 +1177,8 @@ button:active {
   .services__img_file {
     width: 100%;
     box-sizing: border-box; }
+  .services .tablet-moretext {
+    margin: 10px 0; }
   .services .expand-button {
     height: fit-content;
     display: flex;
@@ -1227,8 +1233,6 @@ button:active {
         display: flex;
         justify-content: center;
         align-items: center; }
-      .services .request-block__info, .services .request-block__img {
-        flex: 1; }
       .services .request-block__text {
         padding: 50px; }
         .services .request-block__text--hide {
@@ -1309,6 +1313,9 @@ button:active {
       .services .request-block__nav--list li {
         padding: 0 5px;
         font-size: 1.3rem; } }
+  @media (max-width: 768px) {
+    .services .services__img_file {
+      width: 100%; } }
   .services .swiper-slide-repair {
     height: 400px !important; }
   .services .card-repair {
@@ -1474,7 +1481,8 @@ button {
   .brand-list {
     display: flex;
     justify-content: start;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+    margin: 0 10px; } }
 
 @media (min-width: 1120px) {
   .brand-card {
@@ -1506,6 +1514,28 @@ button {
 
 .lenovo {
   background-image: url(img/8.svg); }
+
+.modal-call {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s; }
+
+.feedback.open,
+.modal-call.open {
+  visibility: visible;
+  opacity: 1; }
+
+.open {
+  visibility: visible;
+  opacity: 1; }
 
 .feedback,
 .modal-call {
@@ -1544,7 +1574,7 @@ button {
       position: relative; }
       .feedback__wrapper > h2::before,
       .modal-call__wrapper > h2::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: -20px;
@@ -1624,7 +1654,7 @@ button {
     .feedback .swiper_prices .order-button::before,
     .modal-call__submit-button::before,
     .modal-call .swiper_prices .order-button::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 37%;
       left: 83%;
@@ -1657,6 +1687,9 @@ button {
 
 .card-button {
   margin-left: 15%; }
+
+.card-button.card-button-repair {
+  margin-left: 65%; }
 
 .swiper-slide,
 .card,
@@ -2051,15 +2084,17 @@ button {
   font-size: 0.9rem; }
 
 .feedback {
-  width: 320px;
-  max-width: 400px;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s; }
   .feedback > h2 {
     padding: 30px 0;
     font-size: 24px;
