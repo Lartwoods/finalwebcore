@@ -1138,7 +1138,7 @@ button:active {
     .services__nav--list {
       width: auto;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
       padding-left: 20px;
       overflow-x: auto; }
@@ -1334,13 +1334,54 @@ button:active {
 #moretext {
   display: none; }
 
+@media (max-width: 768px) {
+  .services__about {
+    flex-direction: column; }
+    .services__about .services__info,
+    .services__about .services__img {
+      width: 100%; } }
+
+.button-show,
+.button-hide {
+  position: relative;
+  display: block;
+  width: auto;
+  margin: 5% 0 2% 10%;
+  transition: color 0.3s; }
+
+.button-show:before,
+.button-hide:before {
+  position: absolute;
+  content: "";
+  background: url(img/expand.svg) no-repeat center center;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  top: 10%;
+  left: -35%;
+  transition: transform 0.3s, opacity 0.3s; }
+
+.button-show:hover,
+.button-hide:hover {
+  color: #b5b6bc;
+  transition: color 0.3s opacity 0.3s; }
+
+.button-hide:before {
+  transform: rotate(180deg);
+  left: -65%;
+  opacity: 1; }
+
+.button-hide:hover:before,
+.button-show:hover:before {
+  opacity: 50%; }
+
 .brand-wrapper {
   min-width: 320px;
   margin: auto;
   background-color: #f8f8f8; }
   .brand-wrapper__text {
     width: 350px;
-    height: 48px;
+    height: fit-content;
     padding: 2rem 0 2rem 2rem;
     color: #7e7e82;
     font-family: "TT Lakes";
@@ -1417,17 +1458,13 @@ button {
       .button-show:hover {
         color: #b5b6bc;
         transition: color 0.3s opacity 0.3s; }
-      .button-show:before {
-        transform: rotate(180deg);
-        left: -65%;
-        opacity: 1; }
       .button-show:hover:before {
         opacity: 50%; } }
 
 @media (min-width: 768px) {
   .brand-wrapper__text {
     width: 96%;
-    height: fit-content;
+    height: 60px;
     margin-left: 4%; }
   .card,
   .brand-card {
@@ -1442,6 +1479,33 @@ button {
 @media (min-width: 1120px) {
   .brand-card {
     width: 23% !important; } }
+
+.brand-picture {
+  width: 50%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-position: left; }
+
+.acer {
+  background-image: url(img/5.svg); }
+
+.sony {
+  background-image: url(img/6.svg); }
+
+.bosch {
+  background-image: url(img/3.svg); }
+
+.samsung {
+  background-image: url(img/7.svg); }
+
+.apple {
+  height: 70%;
+  background-image: url(img/1.svg); }
+
+.lenovo {
+  background-image: url(img/8.svg); }
 
 .feedback,
 .modal-call {
@@ -1592,7 +1656,7 @@ button {
     padding: 0; }
 
 .card-button {
-  margin-left: 20%; }
+  margin-left: 15%; }
 
 .swiper-slide,
 .card,
@@ -1619,31 +1683,6 @@ button {
 .swiper-slide {
   border: 1px solid #eaeaea;
   border-radius: 6px; }
-
-.brand-picture {
-  width: 94px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right center; }
-
-.acer {
-  background-image: url(img/5.svg); }
-
-.sony {
-  background-image: url(img/6.svg); }
-
-.bosch {
-  background-image: url(img/3.svg); }
-
-.samsung {
-  background-image: url(img/7.svg); }
-
-.apple {
-  background-image: url(img/1.svg); }
-
-.lenovo {
-  background-image: url(img/8.svg); }
 
 .swiper-pagination-bullet {
   width: 22px;
@@ -2102,11 +2141,11 @@ button {
 
 @font-face {
   font-family: "TT Lakes";
-  src: url(984b7f90c10e60291161.woff2) format("woff2"), url(fonts/TTLakes-Medium.woff) format("woff"); }
+  src: url(fonts/TTLakes-Medium.woff2) format("woff2"), url(fonts/TTLakes-Medium.woff) format("woff"); }
 
 @font-face {
   font-family: "TT Lakes Bold";
-  src: url(a72fb12b6436615615e2.woff2) format("woff2"), url(fonts/TTLakes-ExtraBold.woff) format("woff"); }
+  src: url(fonts/TTLakes-ExtraBold.woff2) format("woff2"), url(fonts/TTLakes-ExtraBold.woff) format("woff"); }
 
 *,
 *::before,
