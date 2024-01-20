@@ -1,26 +1,25 @@
-// .feedback,
-// .modal-call {
-//   position: fixed;
-//   right: 0;
-//   top: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   z-index: 999;
-//   background-color: rgba(255, 255, 255, 0.8);
-//   backdrop-filter: blur(10px);
-//   visibility: hidden;
-//   opacity: 0;
-//   transition: all 0.4s;
-// }
-// .feedback.open,
-// .modal-call.open {
-//   visibility: visible;
-//   opacity: 1;
-// }
-// .open {
-//   visibility: visible;
-//   opacity: 1;
-// }
+.modal-call {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.feedback.open,
+.modal-call.open {
+  visibility: visible;
+  opacity: 1;
+}
+.open {
+  visibility: visible;
+  opacity: 1;
+}
 // .feedback__wrapper,
 // .modal-call__wrapper {
 //   position: fixed;
@@ -148,7 +147,6 @@
 //   }
 // }
 
-
 .feedback,
 .modal-call {
   position: fixed;
@@ -187,13 +185,13 @@
       position: relative;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: -20px;
         width: 4px;
         height: 100%;
-        background: url('../img/logo/highlight.svg') no-repeat center;
+        background: url("../img/logo/highlight.svg") no-repeat center;
         background-size: contain;
       }
     }
@@ -277,7 +275,7 @@
     font-size: 0.9rem;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 37%;
       left: 83%;

@@ -419,7 +419,9 @@
 .services__about {
   display: flex;
   justify-content: center;
-  align-items: center;
+
+  align-items: flex-start;
+  // align-items: center;
   width: 100%;
 
   .services__info {
@@ -429,7 +431,7 @@
     width: 100%;
   }
   .services__img {
-    flex: 1;
+    flex: 1.2;
   }
   .services__img_file {
     width: 96%;
@@ -561,7 +563,9 @@
     width: 100%;
     box-sizing: border-box;
   }
-
+  .tablet-moretext {
+    margin: 10px 0;
+  }
   .expand-button {
     height: fit-content;
     display: flex;
@@ -671,10 +675,10 @@
         align-items: center;
       }
 
-      &__info,
-      &__img {
-        flex: 1;
-      }
+      // &__info,
+      // &__img {
+      //   flex: 1;
+      // }
 
       &__text {
         padding: 50px;
@@ -792,7 +796,11 @@
       }
     }
   }
-
+  @media (max-width: 768px) {
+    .services__img_file {
+      width: 100%;
+    }
+  }
   /*------------swiper-repair--------------*/
 
   .swiper-slide-repair {

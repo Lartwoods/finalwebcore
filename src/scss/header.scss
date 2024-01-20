@@ -367,6 +367,7 @@ $color-gray: #7e7e82;
 
 .header__container {
   max-width: 100%;
+
   padding: 0;
   box-sizing: border-box;
   border-bottom: 1px solid $color-border;
@@ -477,13 +478,13 @@ $color-gray: #7e7e82;
 .header__item {
   .header__item--logo {
     display: block;
-  width: 96px;
-  height: 50px; /* Set the desired height */
-  max-width: 160px;
-  background-image: url("../img/logo/CPS_logo.svg");
-  background-size: contain; /* Adjust as needed */
-  background-repeat: no-repeat;
-  background-position: center center;
+    width: 96px;
+    height: 50px;
+    max-width: 160px;
+    background-image: url("../img/logo/CPS_logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 
@@ -502,5 +503,13 @@ $color-gray: #7e7e82;
 @media (min-width: 1440px) {
   .header__list {
     display: none;
+  }
+}
+@media (max-width: 767px) {
+  .header__container {
+    height: 100px;
+    .header__list{
+      padding-top: 5%;
+    }
   }
 }
