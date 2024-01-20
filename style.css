@@ -1239,7 +1239,7 @@ button:active {
   .services__reviews-button {
     display: none; }
   .services__text {
-    padding: 0 20px; }
+    padding: 2% 20px; }
     .services__text p,
     .services__text .request-block p {
       width: 100%;
