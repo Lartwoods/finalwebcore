@@ -839,6 +839,10 @@ main {
   justify-content: space-around;
   flex: 1; }
 
+.services__clients-buttons_text {
+  margin-top: 2%;
+  font-weight: bold; }
+
 @media (min-width: 768px) and (max-width: 1439px) {
   .header {
     display: block; }
