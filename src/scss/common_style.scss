@@ -1,33 +1,97 @@
-// @font-face {
-//   font-family: 'TT Lakes';
-//   src: url('../fonts/medium/TTLakes-Medium.woff2') format('woff2'),
-//     url('../fonts/medium/TTLakes-Medium.woff') format('woff');
-// }
+$color-btn: #ff3e79;
+$color-gray-text: #7e7e82;
+$color-text: #1b1c21;
+$color-accent: #41f6d7;
+$color-border: #d9fff5;
+$color-background: #f8f8f8;
+$color-white: #ffffff;
+$color-black: #1b1c21;
+$color-gray: #7e7e82;
 
-// @font-face {
-//   font-family: 'TT Lakes Bold';
-//   src: url('../fonts/medium/TTLakes-DemiBold.woff2') format('woff2'),
-//     url('../fonts/medium/TTLakes-DemiBold.woff') format('woff');
-// }
+$shadow-color: rgba(0, 0, 0, 0.1);
+$blur-background: rgba(255, 255, 255, 0.8);
 
-// *,
-// *::before,
-// *::after {
-//   padding: 0;
-//   margin: 0;
-//   border: 0;
-//   box-sizing: border-box;
-// }
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/medium/TTLakes-Medium.woff2") format("woff2"),
+    url("../fonts/medium/TTLakes-Medium.woff") format("woff");
+}
 
-// a {
-//   text-decoration: none;
-//   color: black;
-// }
+@font-face {
+  font-family: "TT Lakes Bold";
+  src: url("../fonts/bold/TTLakes-ExtraBold.woff2") format("woff2"),
+    url("../fonts/bold/TTLakes-ExtraBold.woff") format("woff");
+}
 
-// ul,
-// ol,
-// li {
-//   list-style: none;
-// }
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
 
+a {
+  text-decoration: none;
+  color: $color-text;
+}
 
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+html,
+body {
+  min-width: 320px;
+  height: 100%;
+  color: $color-text;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
+main {
+  background-color: #f8f8f8;
+}
+.main-content {
+  background-color: $color-background;
+  filter: blur(0);
+  transition: filter 0.3s ease-in-out;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    position: relative;
+    display: flex;
+    height: 100%;
+    max-width: 1440px;
+    background-color: $color-background !important;
+  }
+
+  .main-content {
+    flex: 1;
+    max-width: 1120px;
+  }
+}
